@@ -1,3 +1,4 @@
+//cinstant prodductdetails for testing
 const products = [
   {
     name: "Airpods Wireless Bluetooth Headphones",
