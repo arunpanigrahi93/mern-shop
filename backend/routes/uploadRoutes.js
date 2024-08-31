@@ -18,7 +18,7 @@ const storage = multer.diskStorage({
   filename(req, file, cb) {
     cb(
       null,
-      `${file.fieldname}-${Date.now()}${path.extname(file.originalname)}`
+      `${file.fieldname}-${Date.now()}${path.posix.extname(file.originalname)}`
     );
   },
 });
@@ -43,9 +43,11 @@ const upload = multer({
 });
 
 router.post("/", upload.single("image"), (req, res) => {
+  // Normalize the file path to use forward slashes
+  const imagePath = `/${req.file.path.replace(/\\/g, "/")}`;
   res.send({
     message: "Image Uploaded",
-    image: `/${req.file.path}`,
+    image: imagePath,
   });
 });
 
