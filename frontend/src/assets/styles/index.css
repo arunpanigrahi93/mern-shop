@@ -49,11 +49,36 @@ table th {
   margin-top: 10px;
 }
 
-.carousel-caption {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+.carousel-content {
+  display: flex;
+  height: 500px; /* Adjust height as needed */
 }
+
+.carousel-image-wrapper {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image is cropped and centered */
+}
+
+.carousel-text-wrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+  padding: 20px;
+}
+
+.carousel-caption {
+  margin: 0;
+  padding: 0;
+}
+
+
