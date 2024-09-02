@@ -1,4 +1,4 @@
-//constant prodductdetails for testing
+//constant productdetails for testing
 const products = [
   {
     name: "Airpods Wireless Bluetooth Headphones",
